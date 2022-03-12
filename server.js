@@ -3,6 +3,22 @@ const session = require('express-session');
 
 const PORT = process.env.PORT || '8080';
 
+// ----------------------------------------------------------------------
+// some data that should not be stored here ;)
+
+// should be in database
+let user_id_map = {
+    "test@test": 1
+}
+
+// could also be stored in database
+let weekly_challenge = [
+    ["fa-solid fa-video", "participate in a Keynote"],
+    ["fa-solid fa-brain", "take a quiz"],
+    ["fa-solid fa-cake-candles", "Celebrate your progress"]
+]
+
+// ----------------------------------------------------------------------
 
 let app = express();
 
@@ -32,7 +48,8 @@ app.get('/profile', (req, res) => {
 app.get('/profile/image', (req, res) => {
     res.set({'Content-Type': 'image/png'});
     if (req.session.loggedin) {
-        res.send()
+        let uid = user_id_map[req.session.email]
+        res.sendFile(__dirname + "/data/user/" + uid + "/profile-img.png");
     } else {
         res.sendFile(__dirname + "/public/" + "imgs/user.png");
     }
@@ -40,6 +57,10 @@ app.get('/profile/image', (req, res) => {
 
 app.get('/login', (req, res) => {
     res.sendFile(__dirname + "/views/" + "login.html");
+})
+
+app.get("/challenges/weekly", (req, res) => {
+    res.send(JSON.stringify(Object.assign({}, weekly_challenge)));
 })
 
 app.get("/node_modules/@ibm/plex/scss/ibm-plex.scss", (req, res) => {

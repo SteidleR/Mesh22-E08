@@ -1,0 +1,32 @@
+.current { grid-area: current; }
+.weekly-challenge { grid-area: weekly-challenge; }
+.recommended { grid-area: recommended; }
+.paks-friends { grid-area: paks-friends; }
+
+#home-main {
+    display: grid;
+    grid-template-areas:
+    'current current current weekly-challenge weekly-challenge weekly-challenge'
+    'recommended recommended recommended paks-friends paks-friends paks-friends'
+    'recommended recommended recommended paks-friends paks-friends paks-friends'
+    'recommended recommended recommended paks-friends paks-friends paks-friends'
+    'recommended recommended recommended paks-friends paks-friends paks-friends'
+    'recommended recommended recommended paks-friends paks-friends paks-friends';
+    padding: 10px;
+    height: 80vh;
+}
+
+#home-main > div > h1,
+.weekly-challenge > div > h1{
+    text-shadow: 2px 2px 1px #c9c9c9;
+    font-size: 1.4vw;
+    font-weight: bold;
+}
+
+#home-main hr {
+    size: 4px;
+}
+
+.col {
+    float: left;
+}
