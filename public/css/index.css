@@ -1,4 +1,7 @@
+@import '/node_modules/@ibm/plex/scss/ibm-plex.scss';
+
 body {
+    font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace !important;
     margin: 0;
     padding: 0;
 }
@@ -30,6 +33,15 @@ body {
     border-radius: 50%;
     width: 40px;
     height: 40px;
+}
+
+.top-banner {
+    background-color: #0791F5;
+    width: 100%;
+    overflow: hidden;
+    font-size: 3vw;
+    color: #ffffff;
+    text-align: center;
 }
 
 .profile-main-div {
@@ -64,4 +76,104 @@ body {
 
 .footer > a {
     color: white;
+}
+
+.top-bar {
+    margin: 0.2em;
+    padding: 0.2em 3em;
+    border: 1px solid #333333;
+}
+
+.top-bar div {
+    display: inline-block;
+}
+
+.search-container {
+    display: inline-block;
+}
+
+.search-container button {
+    margin: 0 0 0 -0.2rem;
+}
+
+#search-bar {
+    width: 50vw;
+}
+
+.btn-primary {
+    padding: 0.2rem 0.75rem !important;
+    background-color: #0791F5 !important;
+}
+
+.btn-outline-dark {
+    padding: 0.2rem 0.75rem !important;
+}
+
+.login-register-div button {
+    font-size: 0.9rem;
+}
+
+.login-register-div {
+    float: right;
+}
+
+#register-main {
+    margin-top: 2em;
+    position: relative;
+}
+
+#register-main img {
+    width: 50vw;
+    height: auto;
+}
+
+.img-container {
+    max-width: 50vw;
+    position: relative;
+    display: inline-block;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 1.5vw;
+}
+
+.motivation-text {
+    background-color: #DCF0F9;
+    z-index: 1;
+    padding: 0 1.2em;
+}
+
+hr {
+    width: 80%;
+    height: .1em !important;
+    color: #333333;
+}
+
+.register-container {
+    display: inline-block;
+    margin: 0 4vw;
+}
+
+.register-container button {
+    margin: .4em 0;
+    width: 20vw;
+    height: 5vh;
+}
+
+#login-main {
+    margin: 7vh;
+    width: 50vw;
+}
+
+#login-main h1 {
+    color: #0791F5;
+}
+
+#login-main input {
+    width: 80%;
 }
