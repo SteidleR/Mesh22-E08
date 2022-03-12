@@ -12,7 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
-    "express-session": "^1.17.2",
-    "wysiwyg-editor-node-sdk": "^4.0.9"
+    "express-session": "^1.17.2"
   }
 }

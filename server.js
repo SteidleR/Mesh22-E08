@@ -28,7 +28,7 @@ app.get('/profile/image', (req, res) => {
     }
 })
 
-let server = app.listen(8081, function () {
+let server = app.listen(80, function () {
     let host = server.address().address
     let port = server.address().port
 
