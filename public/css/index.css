@@ -52,16 +52,6 @@ body {
     border-right: 1px solid black;
 }
 
-.profile-main-div-right {
-    display: block;
-    text-align: center;
-}
-
-.profile-badges {
-    border: 1px solid #333333;
-    border-radius: 2px;
-}
-
 .footer {
     position: fixed;
     left: 0;
