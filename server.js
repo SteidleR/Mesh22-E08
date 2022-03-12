@@ -1,6 +1,10 @@
 const express = require('express');
 const session = require('express-session');
 
+
+const PORT = process.env.PORT || '8080';
+
+
 let app = express();
 
 app.use(session({
@@ -28,9 +32,9 @@ app.get('/profile/image', (req, res) => {
     }
 })
 
-let server = app.listen(80, function () {
+let server = app.listen(PORT, function () {
     let host = server.address().address
     let port = server.address().port
 
-    console.log("Example app listening at http://%s:%s", host, port)
+    console.log("App listening at http://%s:%s", host, port)
 })
