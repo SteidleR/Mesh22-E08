@@ -42,7 +42,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/profile', (req, res) => {
-    res.sendFile(__dirname + "/views/" + "profile.html");
+    if (req.session.loggedin) {
+        res.sendFile(__dirname + "/views/" + "profile.html");
+    } else {
+        res.redirect("/");
+    }
 })
 
 app.get('/profile/image', (req, res) => {
