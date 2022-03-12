@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.topnav .profile {
+    float: right;
+    padding: 5px 10px;
+}
+
+.topnav > .profile > img {
+    background: #ffffff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.profile-main-div {
+    margin: 1em 4em;
+}
+
+.profile-img-large {
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+    border: 5px solid #333333;
+}
+
+.profile-main-div-left {
+    float: left;
+    width: 18%;
+    height: 88%;
+    display: block;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.profile-main-div-right {
+    display: block;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.footer > a {
+    color: white;
+}
