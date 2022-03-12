@@ -1,0 +1,59 @@
+.freemium-msg {
+    margin-top: 0.4em;
+    padding: 0.2em 3em;
+    background-color: #222222;
+}
+
+.side-menu { grid-area: side; }
+.main { grid-area: main; }
+
+#profile-main {
+    display: grid;
+    grid-template-areas:
+    'side main main main main main main main';
+    padding: 10px 0;
+    height: 70vh;
+}
+
+.side-menu {
+    margin-top: 1em;
+    border-right: 2px solid #222222;
+    position: relative;
+}
+
+.side-menu > img {
+    background: #ffffff;
+    width: 10vw;
+    height: 10vw;
+    border: 2px solid #0791F5;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.side-menu a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #818181;
+    display: block;
+    border-top: 2px solid #222222;
+}
+
+.side-menu a:last-of-type {
+    border-bottom: 2px solid #222222;
+}
+
+.side-menu a:hover {
+    color: #0791F5;
+}
+
+.side-menu > .active {
+    color: #0791F5;
+}
+
+.side-menu > div  {
+    margin-top: 12vw;
+}
