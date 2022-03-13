@@ -8,4 +8,13 @@ Titel: 360 Academy
 
 Slogan: 
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FVjyg22II1T6TZc6Q96q5y7%2FUntitled%3Fnode-id%3D26%253A4444%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D26%253A4444" allowfullscreen></iframe>
+## Demo:
+
+Web Click Dummy:
+
+Mobile Click Dummy: \
+https://www.figma.com/proto/Vjyg22II1T6TZc6Q96q5y7/Untitled?node-id=26%3A4444&scaling=scale-down&page-id=0%3A1&starting-point-node-id=26%3A4444
+
+Web Preview: \
+https://mesh22-e08.herokuapp.com \
+Email: test@test | Password: test
