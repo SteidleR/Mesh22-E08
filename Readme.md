@@ -11,6 +11,7 @@ Slogan:
 ## Demo
 
 **Web Click Dummy:**
+https://www.figma.com/proto/D51bCDwzp8fC7ENQ4rwmrB/MESH-E08?node-id=42%3A287&scaling=scale-down&page-id=0%3A1&starting-point-node-id=42%3A287
 
 **Mobile Click Dummy:** \
 https://www.figma.com/proto/Vjyg22II1T6TZc6Q96q5y7/Untitled?node-id=26%3A4444&scaling=scale-down&page-id=0%3A1&starting-point-node-id=26%3A4444
