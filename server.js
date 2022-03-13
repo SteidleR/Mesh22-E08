@@ -1,7 +1,6 @@
 const express = require('express');
 const session = require('express-session');
-
-const PORT = process.env.PORT || '8080';
+const fs = require('fs');
 
 // ----------------------------------------------------------------------
 // some data that should not be stored here ;)
@@ -20,7 +19,12 @@ let weekly_challenge = [
 
 // ----------------------------------------------------------------------
 
+const PORT = process.env.PORT || '8080';
+
 let app = express();
+
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 app.use(session({
     secret: 'secret',
@@ -30,7 +34,6 @@ app.use(session({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
@@ -65,6 +68,37 @@ app.get('/login', (req, res) => {
 
 app.get("/challenges/weekly", (req, res) => {
     res.send(JSON.stringify(Object.assign({}, weekly_challenge)));
+})
+
+app.get("/learning/", (req, res) => {
+    res.sendFile(__dirname + "/views/"  + "learning.html");
+})
+
+app.get("/learning/:learning_id", (req, res) => {
+    let learning_id = req.params.learning_id;
+
+    try {
+        const data_raw = fs.readFileSync(__dirname + "/data/learning/" + learning_id + "/data.json");
+
+        res.render(__dirname + "/views/"  + "learning.html", {data: data_raw, id: learning_id});
+
+    } catch (err) {
+        console.log(err)
+        res.sendStatus(404)
+    }
+})
+
+app.get("/learning/:learning_id/icon", (req, res) => {
+    let learning_id = req.params.learning_id;
+
+    res.sendFile(__dirname + "/data/learning/" + learning_id + "/icon.png");
+})
+
+app.get("/learning/:learning_id/content/:content_id", (req, res) => {
+    let learning_id = req.params.learning_id;
+    let content_id =  req.params.content_id;
+
+    res.sendFile(__dirname + "/data/learning/" + learning_id + "/content/" + content_id);
 })
 
 app.get("/node_modules/@ibm/plex/scss/ibm-plex.scss", (req, res) => {
