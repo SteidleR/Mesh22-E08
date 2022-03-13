@@ -8,13 +8,20 @@ Titel: 360 Academy
 
 Slogan: 
 
-## Demo:
+## Demo
 
-Web Click Dummy:
+**Web Click Dummy:**
 
-Mobile Click Dummy: \
+**Mobile Click Dummy:** \
 https://www.figma.com/proto/Vjyg22II1T6TZc6Q96q5y7/Untitled?node-id=26%3A4444&scaling=scale-down&page-id=0%3A1&starting-point-node-id=26%3A4444
 
-Web Preview: \
+**Web Preview:** \
 https://mesh22-e08.herokuapp.com \
 Email: test@test | Password: test
+
+## Team E08
+
+**Derya Bal** \
+**Malte Dietrich** \
+**Giuseppe Fallea** \
+**Robin Steidle**
